@@ -1,0 +1,14 @@
+[package]
+name = "rdefer"
+version = "1.0.0"
+authors = ["Alexander Procelewski <alexprocelewski@gmail.com>"]
+edition = "2018"
+description = "A Rust crate providing go like defer functionality in both sync and async contexts."
+license = "MIT"
+
+[dependencies]
+tokio = { version = "*", features = ["full"], optional = true }
+
+[features]
+default = []
+async = ["tokio"]
